@@ -40,28 +40,3 @@ function playRound(humanChoice, computerChoice) {
 
 const humanSelection = getHumanChoice(); 
 const computerSelection = getComputerChoice(); 
-
-
-function playGame(rounds) {
-    for (let i = 0; i < rounds; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
-
-        console.log(`Round ${i + 1}`);
-        console.log(`Human: ${humanSelection}, Computer: ${computerSelection}`);
-        console.log(playRound(humanSelection, computerSelection));
-        console.log(`Scores - Human: ${humanScore}, Computer: ${computerScore}`);
-        console.log('--------------------------');
-    }
-
-
-    if (humanScore > computerScore) {
-    console.log("WINNER!");
-    } else if (humanScore < computerScore) {
-    console.log("LOSER");
-    } else {
-    console.log("TIED!");
-    }
-}
-
-playGame(5);
