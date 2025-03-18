@@ -7,15 +7,23 @@ function getComputerChoice() {
 
 function getHumanChoice() {
     const choices = ["rock", "paper", "scissors"];
-    let chosenChoice = prompt("Enter Rock, Paper, or Scissors:").toLowerCase();
+    const rockButton = document.getElementById("rock");
+    const paperButton = document.getElementById("paper");
+    const scissorsButton = document.getElementById("scissors");
+    let chosenChoice = "";
 
-
-    while (!choices.includes(chosenChoice)) {
-        chosenChoice = prompt("Invalid choice. Please enter Rock, Paper, or Scissors:").toLowerCase();
-    }
-
+    rockButton.addEventListener("click", () => {
+        chosenChoice = "rock";
+    });
+    paperButton.addEventListener("click", () => {
+        chosenChoice = "paper";
+    });
+    scissorsButton.addEventListener("click", () => {
+        chosenChoice = "scissors";
+    });
     return chosenChoice;
 }
+console.log(chosenChoice);
 
 let humanScore = 0;
 let computerScore = 0;
